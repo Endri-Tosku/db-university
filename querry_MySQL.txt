@@ -9,12 +9,21 @@ FROM students
 WHERE YEAR(date_of_birth) = 1990;
 
 
+
 -- 2. Corsi con più di 10 crediti
 SELECT *
 FROM courses
 WHERE cfu > 10;
 
---COUNT
+-- COUNT
 SELECT count(id)
 FROM courses
 WHERE cfu > 10;
+
+
+
+-- 3. Tutti gli studenti che hanno più di 30 anni
+SELECT *
+FROM students
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) > 30; // TIMESTAMPDIFF calcola la differenza in anni
+
