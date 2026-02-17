@@ -7,3 +7,14 @@ WHERE YEAR(date_of_birth) = 1990;
 SELECT COUNT(id)
 FROM students
 WHERE YEAR(date_of_birth) = 1990;
+
+
+-- 2. Corsi con più di 10 crediti
+SELECT *
+FROM courses
+WHERE cfu > 10;
+
+--COUNT
+SELECT count(id)
+FROM courses
+WHERE cfu > 10;
