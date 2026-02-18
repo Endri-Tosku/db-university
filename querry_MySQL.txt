@@ -1,3 +1,5 @@
+///////////// QUERRY CON SELECT ///////////
+
 -- 1. Studenti nati nel 1990
 SELECT *
 FROM students
@@ -38,7 +40,10 @@ AND year = 1; // AND combina due condizioni //
 
 
 -- 5. Appelli del 20/06/2020 dopo le 14
-
+SELECT *
+FROM exams
+WHERE "HOUR" ("hour") > 14
+AND "date" 
 
 
 -- 6. Corsi di laurea magistrale
@@ -49,7 +54,7 @@ WHERE level = 'magistrale';
 
 
 -- 7. Da quanti dipartimenti è composta l’università?
-SELECT COUNT(*)
+SELECT COUNT(*) AS num_departments
 FROM departments;
 
 
@@ -58,3 +63,9 @@ FROM departments;
 SELECT COUNT(*) AS insegnanti_senza_telefono
 FROM teachers
 WHERE phone IS NULL; // IS NULL si usa per valori nulli (NON = NULL!) //
+
+
+
+///////// QUERRY CON GROUP ///////////
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+SELECT 
